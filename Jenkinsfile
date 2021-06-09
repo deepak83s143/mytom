@@ -35,8 +35,7 @@ pipeline {
 		steps {
                 echo 'Create package from raw code '
                 sh 'sudo apt update'
-                sh 'sudo systemctl restart docker' 
-		sh 'sudo docker build -t mynginx .'
+                sh 'sudo docker build -t mynginx .'
                 sh 'sudo docker run -d  -P mynginx' 
 		sh 'sudo docker ps -a'
             }
