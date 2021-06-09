@@ -1,4 +1,4 @@
-FROM tomcat
+FROM nginx
 Maintainer "Deepak Sharma"
-COPY sample.war /usr/local/tomcat/webapps/
-CMD [“catalina.sh”, “run”]
+COPY index.html /usr/share/nginx/html
+RUN service nginx restart
